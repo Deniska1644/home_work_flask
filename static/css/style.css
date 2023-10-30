@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --index: calc(1vh + 1vw);
+}
+
+.header {
+    padding:   0 calc(var(--index) * 4);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(118, 203, 23);
+
+}
+
+.header h3 {
+   margin-left: calc(0.8 * var(--index));
+}
+
+.burgerButton {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.burgerButton>span,
+.burgerButton>span::before,
+.burgerButton>span::after {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+    margin-top: -1px;
+    transition: 0.4s;
+}
+
+.burgerButton>span {
+    margin-left: 15px;
+}
+
+.burgerButton>span::before,
+.burgerButton>span::after {
+    content: '';
+}
+
+.burgerButton>span::before {
+    transform: translateY(-5px);
+}
+
+.burgerButton>span::after {
+    transform: translateY(5px);
+}
+
+.content {
+    background-color: rgb(255, 255, 255);
+    padding: 0 20vw;
+}
+
+.topContent h1 {
+    text-align: center;
+}
+
+.footer {
+    background-color: rgb(118, 203, 23);
+    padding: calc(var(--index) * 0.5) 0;
+}
+
+.footer h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.productionType {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.topContent {
+    padding-top: calc(var(--index) * 2);
+}
+
+.bottomContent {
+    display: flex;
+    flex-direction: row;
+    gap: calc(0.8 * var(--index));
+}
+
+.productionType img {
+    border-radius: 16px;
+}
+
+.productionType h2 {
+    text-align: center;
+    margin-top: calc(0.5 * var(--index));
+    color: rgb(0, 0, 0);
+}
+
+.midContent {
+    margin-top: calc(var(--index) * 2);
+    margin-bottom: calc(var(--index) * 2);
+}
+
+.bottomContent {
+    padding-bottom: calc(var(--index) * 2);
+}
+
